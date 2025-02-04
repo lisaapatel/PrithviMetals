@@ -1,4 +1,5 @@
 import React from 'react';
+import { HeadFC } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import HeroSection from '../components/HeroSection';
@@ -72,4 +73,11 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage; 
+export default IndexPage;
+
+export const Head: HeadFC = () => (
+  <SEO
+    title="Prithvi Metals - Sustainable Metal Scrap Trading & Recycling"
+    description="Leading metal recycling company specializing in electrical equipment and industrial scrap. Committed to sustainable practices and fair pricing."
+  />
+); 

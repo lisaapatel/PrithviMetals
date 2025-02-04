@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, HeadFC } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 
@@ -25,4 +25,6 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage; 
+export default NotFoundPage;
+
+export const Head: HeadFC = () => <SEO title="404: Not Found" />; 
