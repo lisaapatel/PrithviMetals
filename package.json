@@ -16,8 +16,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ext .ts,.tsx",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
-    "deploy": "npx gatsby clean && npx gatsby build --prefix-paths && gh-pages -d public",
-    "deploy:ci": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/lisaapatel/PrithviMetals.git"
+    "deploy": "npx gatsby clean && npx gatsby build && gh-pages -d public",
+    "deploy:ci": "gatsby build && gh-pages -d public -r https://$GH_TOKEN@github.com/lisaapatel/PrithviMetals.git"
   },
   "dependencies": {
     "gatsby": "^5.13.1",

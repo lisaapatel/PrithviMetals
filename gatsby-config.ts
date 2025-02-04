@@ -2,11 +2,11 @@ import type { GatsbyConfig } from 'gatsby';
 import path from 'path';
 
 const config: GatsbyConfig = {
-  pathPrefix: "/PrithviMetals",
+  // pathPrefix: "/PrithviMetals",
   siteMetadata: {
     title: `Prithvi Metals`,
     description: `Sustainable metal scrap trading and recycling solutions`,
-    siteUrl: `https://lisaapatel.github.io/PrithviMetals`,
+    siteUrl: `https://www.prithvimetals.us`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
