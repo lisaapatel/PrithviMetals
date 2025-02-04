@@ -1,37 +1,111 @@
-import React, { ReactNode } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
-interface LayoutProps {
-  children: ReactNode;
-}
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-[#0B1121]">
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0B1121]/80 backdrop-blur-sm border-b border-gray-800">
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between h-16 sm:h-20">
-            <Link to="/" className="flex items-center">
-              <span className="font-poppins text-xl sm:text-2xl font-semibold text-white">
-                Prithvi Metals
-              </span>
+            <Link to="/" className="text-white text-xl sm:text-2xl font-bold">
+              Prithvi Metals
             </Link>
-            
-            <div className="hidden sm:flex items-center space-x-8">
-              <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              <Link
+                to="/"
+                className="text-gray-300 hover:text-white transition-colors"
+                activeClassName="text-white"
+              >
                 Home
               </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              <Link
+                to="/about"
+                className="text-gray-300 hover:text-white transition-colors"
+                activeClassName="text-white"
+              >
                 About Us
               </Link>
-              <Link to="/what-we-buy" className="text-gray-300 hover:text-white transition-colors">
+              <Link
+                to="/what-we-buy"
+                className="text-gray-300 hover:text-white transition-colors"
+                activeClassName="text-white"
+              >
                 What We Buy
               </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              <Link
+                to="/contact"
+                className="text-gray-300 hover:text-white transition-colors"
+                activeClassName="text-white"
+              >
                 Contact Us
               </Link>
             </div>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              className="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {!isMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              )}
+            </button>
           </nav>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`md:hidden absolute top-16 sm:top-20 left-0 right-0 bg-[#0B1121]/95 backdrop-blur-sm border-b border-gray-800 transition-all duration-300 ${
+            isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
+        >
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex flex-col space-y-4">
+              <Link
+                to="/"
+                className="text-gray-300 hover:text-white transition-colors py-2"
+                activeClassName="text-white"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-300 hover:text-white transition-colors py-2"
+                activeClassName="text-white"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </Link>
+              <Link
+                to="/what-we-buy"
+                className="text-gray-300 hover:text-white transition-colors py-2"
+                activeClassName="text-white"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                What We Buy
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-300 hover:text-white transition-colors py-2"
+                activeClassName="text-white"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
         </div>
       </header>
 
