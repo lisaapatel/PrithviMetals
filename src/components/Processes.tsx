@@ -4,13 +4,11 @@ import { Process } from '../types';
 
 const Processes: React.FC = () => {
   return (
-    <section className="py-20 bg-[#0B1121]">
+    <section className="py-8 sm:py-16 bg-[#0B1121]">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6">Our Process</h2>
-          <p className="text-xl text-gray-400">
-            Simple and efficient steps to recycle your metal scrap
-          </p>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Our Process</h2>
+          <p className="text-xl text-gray-400">Simple and efficient steps to recycle your metal scrap</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {processes.map((process: Process, index: number) => (

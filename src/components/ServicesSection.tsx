@@ -7,7 +7,7 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Electrical Equipment */}
-          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 sm:p-8 hover:border-indigo-500/50 transition-all duration-300">
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 sm:p-8 hover:border-indigo-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
             <h3 className="text-2xl font-bold text-white mb-4">Electrical Equipment</h3>
             <p className="text-gray-400 mb-6">Specialized in high-quality electrical equipment recycling</p>
             <ul className="space-y-3 mb-8">
@@ -49,7 +49,7 @@ const ServicesSection = () => {
           </div>
 
           {/* Automotive & Industrial */}
-          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 sm:p-8 hover:border-indigo-500/50 transition-all duration-300">
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 sm:p-8 hover:border-indigo-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
             <h3 className="text-2xl font-bold text-white mb-4">Automotive & Industrial</h3>
             <p className="text-gray-400 mb-6">Professional automotive and industrial scrap processing</p>
             <ul className="space-y-3 mb-8">
@@ -83,7 +83,7 @@ const ServicesSection = () => {
           </div>
 
           {/* Ferrous & Non-Ferrous */}
-          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 sm:p-8 hover:border-indigo-500/50 transition-all duration-300">
+          <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 sm:p-8 hover:border-indigo-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl">
             <h3 className="text-2xl font-bold text-white mb-4">Ferrous & Non-Ferrous</h3>
             <p className="text-gray-400 mb-6">Expert handling of various metal types</p>
             <ul className="space-y-3 mb-8">

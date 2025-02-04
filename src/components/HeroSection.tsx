@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-[#0B1121] px-4 sm:px-6">
+    <section className="relative min-h-screen flex items-center bg-[#0B1121] px-4 sm:px-6 pb-8 sm:pb-16">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-[#0B1121]/50 to-[#0B1121]/80"></div>
         <div className="absolute inset-0" style={{

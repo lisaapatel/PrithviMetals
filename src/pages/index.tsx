@@ -6,6 +6,9 @@ import HeroSection from '../components/HeroSection';
 import FeaturedServices from '../components/FeaturedServices';
 import Features from '../components/Features';
 import Processes from '../components/Processes';
+import FadeIn from '../components/FadeIn';
+import ScrollFadeIn from '../components/ScrollFadeIn';
+import Button from '../components/Button';
 
 const features = [
   {
@@ -65,10 +68,21 @@ const IndexPage = () => {
         title="Prithvi Metals - Sustainable Metal Scrap Trading & Recycling"
         description="Leading metal recycling company specializing in electrical equipment and industrial scrap. Committed to sustainable practices and fair pricing."
       />
-      <HeroSection />
-      <Processes />
-      <Features />
-      <FeaturedServices />
+      <FadeIn>
+        <HeroSection />
+      </FadeIn>
+      
+      <ScrollFadeIn>
+        <Processes />
+      </ScrollFadeIn>
+      
+      <ScrollFadeIn>
+        <Features />
+      </ScrollFadeIn>
+      
+      <ScrollFadeIn>
+        <FeaturedServices />
+      </ScrollFadeIn>
     </Layout>
   );
 };
