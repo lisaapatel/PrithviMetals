@@ -46,23 +46,23 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </nav>
         </div>
 
-        {/* Mobile Menu - Updated */}
+        {/* Mobile Menu - Updated for better visibility */}
         <div
           className={`md:hidden fixed inset-0 z-50 transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'visible' : 'invisible'
           }`}
         >
-          {/* Backdrop */}
+          {/* Backdrop - Made darker */}
           <div 
-            className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
+            className={`absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity duration-300 ${
               isMenuOpen ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={() => setIsMenuOpen(false)}
           />
           
-          {/* Menu Panel */}
+          {/* Menu Panel - Updated background and text */}
           <div
-            className={`absolute top-0 right-0 w-[75%] max-w-sm h-full bg-[#0B1121] border-l border-gray-800 transform transition-transform duration-300 ease-in-out ${
+            className={`absolute top-0 right-0 w-[75%] max-w-sm h-full bg-[#0B1121]/95 border-l border-gray-700 shadow-xl transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
           >
@@ -70,7 +70,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <div className="flex justify-end mb-8">
                 <button
                   onClick={() => setIsMenuOpen(false)}
-                  className="p-2 text-gray-400 hover:text-white focus:outline-none"
+                  className="p-2 text-white hover:text-indigo-400 focus:outline-none"
                   aria-label="Close menu"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,32 +81,32 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <nav className="flex flex-col space-y-6">
                 <Link
                   to="/"
-                  className="text-lg text-gray-300 hover:text-white transition-colors"
-                  activeClassName="text-white"
+                  className="text-lg font-medium text-white hover:text-indigo-400 transition-colors"
+                  activeClassName="text-indigo-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
                   to="/about"
-                  className="text-lg text-gray-300 hover:text-white transition-colors"
-                  activeClassName="text-white"
+                  className="text-lg font-medium text-white hover:text-indigo-400 transition-colors"
+                  activeClassName="text-indigo-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About Us
                 </Link>
                 <Link
                   to="/what-we-buy"
-                  className="text-lg text-gray-300 hover:text-white transition-colors"
-                  activeClassName="text-white"
+                  className="text-lg font-medium text-white hover:text-indigo-400 transition-colors"
+                  activeClassName="text-indigo-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   What We Buy
                 </Link>
                 <Link
                   to="/contact"
-                  className="text-lg text-gray-300 hover:text-white transition-colors"
-                  activeClassName="text-white"
+                  className="text-lg font-medium text-white hover:text-indigo-400 transition-colors"
+                  activeClassName="text-indigo-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact Us
