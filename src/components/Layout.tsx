@@ -46,27 +46,27 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </nav>
         </div>
 
-        {/* Mobile Menu - Updated for better visibility */}
+        {/* Mobile Menu */}
         <div
           className={`md:hidden fixed inset-0 z-50 transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'visible' : 'invisible'
           }`}
         >
-          {/* Backdrop - Made darker */}
+          {/* Backdrop - Light */}
           <div 
-            className={`absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity duration-300 ${
+            className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${
               isMenuOpen ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={() => setIsMenuOpen(false)}
           />
           
-          {/* Menu Panel - Updated background and text */}
+          {/* Menu Panel - Darker background */}
           <div
-            className={`absolute top-0 right-0 w-[75%] max-w-sm h-full bg-[#0B1121]/95 border-l border-gray-700 shadow-xl transform transition-transform duration-300 ease-in-out ${
+            className={`absolute top-0 right-0 w-[75%] max-w-sm h-full bg-[#050810] border-l border-gray-700 shadow-xl transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
           >
-            <div className="p-6">
+            <div className="p-6 bg-gradient-to-b from-[#0B1121] to-[#050810]">
               <div className="flex justify-end mb-8">
                 <button
                   onClick={() => setIsMenuOpen(false)}
@@ -81,7 +81,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               <nav className="flex flex-col space-y-6">
                 <Link
                   to="/"
-                  className="text-lg font-medium text-white hover:text-indigo-400 transition-colors"
+                  className="text-xl font-semibold text-white hover:text-indigo-400 transition-colors"
                   activeClassName="text-indigo-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -89,7 +89,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </Link>
                 <Link
                   to="/about"
-                  className="text-lg font-medium text-white hover:text-indigo-400 transition-colors"
+                  className="text-xl font-semibold text-white hover:text-indigo-400 transition-colors"
                   activeClassName="text-indigo-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -97,7 +97,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </Link>
                 <Link
                   to="/what-we-buy"
-                  className="text-lg font-medium text-white hover:text-indigo-400 transition-colors"
+                  className="text-xl font-semibold text-white hover:text-indigo-400 transition-colors"
                   activeClassName="text-indigo-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -105,7 +105,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </Link>
                 <Link
                   to="/contact"
-                  className="text-lg font-medium text-white hover:text-indigo-400 transition-colors"
+                  className="text-xl font-semibold text-white hover:text-indigo-400 transition-colors"
                   activeClassName="text-indigo-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
