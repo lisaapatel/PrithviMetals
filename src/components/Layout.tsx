@@ -46,7 +46,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </nav>
         </div>
 
-        {/* Mobile Menu - Refined Design */}
+        {/* Mobile Menu - Darker Design */}
         <div
           className={`md:hidden fixed inset-0 z-50 transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'visible' : 'invisible'
@@ -60,9 +60,9 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             onClick={() => setIsMenuOpen(false)}
           />
           
-          {/* Menu Panel - Refined */}
+          {/* Menu Panel - Darker Background */}
           <div
-            className={`absolute top-0 right-0 w-[80%] max-w-sm h-full bg-gradient-to-b from-[#0B1121] to-[#070B14] border-l border-gray-800/50 shadow-2xl transform transition-transform duration-300 ease-in-out ${
+            className={`absolute top-0 right-0 w-[80%] max-w-sm h-full bg-gradient-to-b from-[#050810]/80 to-[#030508]/80 border-l border-gray-800/50 shadow-2xl transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
           >
@@ -81,43 +81,39 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </button>
               </div>
 
-              {/* Navigation Links */}
+              {/* Navigation Links - No Icons */}
               <nav className="flex-1 px-6 py-8">
                 <div className="flex flex-col space-y-8">
                   <Link
                     to="/"
-                    className="text-lg text-white hover:text-indigo-400 transition-colors flex items-center"
+                    className="text-lg text-white hover:text-indigo-400 transition-colors"
                     activeClassName="text-indigo-400"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <span className="mr-3">🏠</span>
                     Home
                   </Link>
                   <Link
                     to="/about"
-                    className="text-lg text-white hover:text-indigo-400 transition-colors flex items-center"
+                    className="text-lg text-white hover:text-indigo-400 transition-colors"
                     activeClassName="text-indigo-400"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <span className="mr-3">👥</span>
                     About Us
                   </Link>
                   <Link
                     to="/what-we-buy"
-                    className="text-lg text-white hover:text-indigo-400 transition-colors flex items-center"
+                    className="text-lg text-white hover:text-indigo-400 transition-colors"
                     activeClassName="text-indigo-400"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <span className="mr-3">🔄</span>
                     What We Buy
                   </Link>
                   <Link
                     to="/contact"
-                    className="text-lg text-white hover:text-indigo-400 transition-colors flex items-center"
+                    className="text-lg text-white hover:text-indigo-400 transition-colors"
                     activeClassName="text-indigo-400"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <span className="mr-3">📞</span>
                     Contact Us
                   </Link>
                 </div>
