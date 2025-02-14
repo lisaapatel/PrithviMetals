@@ -46,31 +46,33 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </nav>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Refined Design */}
         <div
           className={`md:hidden fixed inset-0 z-50 transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'visible' : 'invisible'
           }`}
         >
-          {/* Backdrop - Light */}
+          {/* Backdrop - Subtle */}
           <div 
-            className={`absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity duration-300 ${
+            className={`absolute inset-0 bg-black/30 backdrop-blur-sm transition-opacity duration-300 ${
               isMenuOpen ? 'opacity-100' : 'opacity-0'
             }`}
             onClick={() => setIsMenuOpen(false)}
           />
           
-          {/* Menu Panel - Darker background */}
+          {/* Menu Panel - Refined */}
           <div
-            className={`absolute top-0 right-0 w-[75%] max-w-sm h-full bg-[#050810] border-l border-gray-700 shadow-xl transform transition-transform duration-300 ease-in-out ${
+            className={`absolute top-0 right-0 w-[80%] max-w-sm h-full bg-gradient-to-b from-[#0B1121] to-[#070B14] border-l border-gray-800/50 shadow-2xl transform transition-transform duration-300 ease-in-out ${
               isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
           >
-            <div className="p-6 bg-gradient-to-b from-[#0B1121] to-[#050810]">
-              <div className="flex justify-end mb-8">
+            <div className="flex flex-col h-full">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-gray-800/50">
+                <span className="text-lg font-semibold text-white font-poppins">Menu</span>
                 <button
                   onClick={() => setIsMenuOpen(false)}
-                  className="p-2 text-white hover:text-indigo-400 focus:outline-none"
+                  className="p-2 text-gray-400 hover:text-white focus:outline-none transition-colors"
                   aria-label="Close menu"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,40 +80,64 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                   </svg>
                 </button>
               </div>
-              <nav className="flex flex-col space-y-6">
-                <Link
-                  to="/"
-                  className="text-xl font-semibold text-white hover:text-indigo-400 transition-colors"
-                  activeClassName="text-indigo-400"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Home
-                </Link>
-                <Link
-                  to="/about"
-                  className="text-xl font-semibold text-white hover:text-indigo-400 transition-colors"
-                  activeClassName="text-indigo-400"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About Us
-                </Link>
-                <Link
-                  to="/what-we-buy"
-                  className="text-xl font-semibold text-white hover:text-indigo-400 transition-colors"
-                  activeClassName="text-indigo-400"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  What We Buy
-                </Link>
-                <Link
-                  to="/contact"
-                  className="text-xl font-semibold text-white hover:text-indigo-400 transition-colors"
-                  activeClassName="text-indigo-400"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Contact Us
-                </Link>
+
+              {/* Navigation Links */}
+              <nav className="flex-1 px-6 py-8">
+                <div className="flex flex-col space-y-8">
+                  <Link
+                    to="/"
+                    className="text-lg text-white hover:text-indigo-400 transition-colors flex items-center"
+                    activeClassName="text-indigo-400"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span className="mr-3">🏠</span>
+                    Home
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="text-lg text-white hover:text-indigo-400 transition-colors flex items-center"
+                    activeClassName="text-indigo-400"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span className="mr-3">👥</span>
+                    About Us
+                  </Link>
+                  <Link
+                    to="/what-we-buy"
+                    className="text-lg text-white hover:text-indigo-400 transition-colors flex items-center"
+                    activeClassName="text-indigo-400"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span className="mr-3">🔄</span>
+                    What We Buy
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="text-lg text-white hover:text-indigo-400 transition-colors flex items-center"
+                    activeClassName="text-indigo-400"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span className="mr-3">📞</span>
+                    Contact Us
+                  </Link>
+                </div>
               </nav>
+
+              {/* Footer */}
+              <div className="p-6 border-t border-gray-800/50">
+                <a 
+                  href="tel:+19255776586"
+                  className="text-gray-400 hover:text-white transition-colors block text-sm mb-2"
+                >
+                  +1 (925) 577-6586
+                </a>
+                <a 
+                  href="mailto:prithvi.metals.pm@gmail.com"
+                  className="text-gray-400 hover:text-white transition-colors block text-sm"
+                >
+                  prithvi.metals.pm@gmail.com
+                </a>
+              </div>
             </div>
           </div>
         </div>
